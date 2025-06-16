@@ -1,3 +1,5 @@
+from random import random
+
 print("loops and arrays")
 
 print("loops and arrays")
@@ -52,6 +54,20 @@ for augalas in augalai:
     if ilgis > 5 and ilgis <10:
         tinkami_zodziai += 1
 print(tinkami_zodziai, "kuriu ilgis tarp 6 ir 9 simboliu")
+
+#sugeneruojame 300 atsitiktiniu skaiciu nuo 0 iki 300
+skaiciai = []
+for _ in range(300) :
+    skaiciai.append(random.randint(0, 300 ))
+#jei >275 - skliaustelliuose
+for skaicius in skaiciai:
+    if skaicius > 275:
+        print( str["skaicius"], end= " ")
+    else:
+        print(skaicius, end=" ")
+#kiek skaiciu didesni nei 150
+didesni_nei_150 = 0
+for skaicius in skaiciai:
 
 
 
