@@ -45,7 +45,13 @@ for augalas in augalai:
 print("trumpesni nei 5 simboliai:" , trumpi)
 print("ilgesno nei 7 simboliai", ilgi)
 
-
+tinkami_zodziai = 0
+#einame per visus zodzius ir tikriname ilgi
+for augalas in augalai:
+    ilgis = len(augalas)
+    if ilgis > 5 and ilgis <10:
+        tinkami_zodziai += 1
+print(tinkami_zodziai, "kuriu ilgis tarp 6 ir 9 simboliu")
 
 
 
