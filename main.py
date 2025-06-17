@@ -57,17 +57,42 @@ print(tinkami_zodziai, "kuriu ilgis tarp 6 ir 9 simboliu")
 
 #sugeneruojame 300 atsitiktiniu skaiciu nuo 0 iki 300
 skaiciai = []
+import random
 for _ in range(300) :
-    skaiciai.append(random.randint(0, 300 ))
-#jei >275 - skliaustelliuose
+    skaiciai.append(random.randint(0, 300))
+#jei >275 - skliausteliuose
 for skaicius in skaiciai:
     if skaicius > 275:
-        print( str["skaicius"], end= " ")
+        print("[" + str("skaicius") + "]", end= " ")
     else:
         print(skaicius, end=" ")
 #kiek skaiciu didesni nei 150
 didesni_nei_150 = 0
 for skaicius in skaiciai:
+    if skaicius > 150:
+        didesni_nei_150 += 1
+    print("skaicius, didesni_nei_150, kiekisend:",didesni_nei_150)
+
+skaiciai = []
+for i in range(1,3001):
+     if i % 77 == 0:
+      skaiciai.append(str(i))
+
+      print(",".join(skaiciai))
+
+#nupiesti kvadrata is zvaigzduciu
+for i in range(25):
+    print("*" * 25)
+
+for y in range(25):
+    for x in range(25):
+        if y == x or x == 24 - y:
+            print("X", end=" ")
+        else:
+            print("*", end=" ")
+    print()
+
+
 
 
 
