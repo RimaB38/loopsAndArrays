@@ -91,6 +91,69 @@ for y in range(25):
         else:
             print("*", end=" ")
     print()
+import random
+# kai iskrenta herbas
+while True:
+    metimas = random.randint (0, 1)
+    if metimas == 0:
+        print( "H")
+        break
+    else:
+        print( "S")
+#stabdom kai tris kartus iskrenta herbas
+import random
+
+herbu_kiekis = 0
+
+while herbu_kiekis < 3:
+    metimas = random.randint (0, 1)
+    if metimas == 0:
+        print( "H")
+        herbu_kiekis += 1
+    else:
+        print("S")
+#stabdom kai iskrenta 3 herbai is eiles
+import random
+
+herbu_is_eiles = 0
+
+while herbu_is_eiles < 3:
+    metimas = random.randint (0, 1)
+    if metimas == 0:
+        print( "H")
+        herbu_is_eiles +=1
+    else:
+        print("S")
+        herbu_is_eiles = 0
+
+petras_total = 0
+kazys_total = 0
+partijos_nr = 0
+
+
+while petras_total < 222 and kazys_total < 222:
+    partijos_nr += 1
+    petras_points = random.randint (10, 20)
+    kazys_points = random.randint (5, 25)
+    petras_total += petras_points
+    kazys_total += kazys_points
+
+    if petras_points > kazys_points:
+        print("Partijos nr:", partijos_nr, "laimejo Petras", petras_points)
+    elif kazys_points > petras_total:
+        print("Partijos nr:", partijos_nr, "laimejo Kazys", kazys_points)
+    else:
+        print("Partijos nr:", partijos_nr, "lygiosios " )
+
+print("Petras",petras_total,"Kazys",kazys_total)
+if petras_total > kazys_total:
+    print("laimejo Petras")
+elif petras_total < kazys_total:
+    print("laimejo Kazys")
+else:
+    print("Lygiosios")
+
+
 
 
 
