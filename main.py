@@ -153,6 +153,59 @@ elif petras_total < kazys_total:
 else:
     print("Lygiosios")
 
+import random
+masyvas = [random.randint(5,25) for _ in range(30)]
+
+print(masyvas)
+
+masyvas = [random.randint(5,25) for _ in range(30)]
+kiek_didesniu = sum(1 for skaicius in masyvas if skaicius > 10)
+
+print("masyvas:", masyvas)
+print("reiksmiu didesniu uz 10, skaicius:", kiek_didesniu)
+
+didziausia_reiksme = max(masyvas)
+print("didziausia masyvo reiksme:", didziausia_reiksme)
+
+
+masyvas = [random.randint(5,25) for _ in range(30)]
+naujas_masyvas = [masyvas [i] - i for i in range(len(masyvas))]
+print(masyvas)
+print("naujas_masyvas(reiksme - indeksas):",naujas_masyvas)
+
+for i in range(10):
+    skaicius=random.randint(5,25)
+    masyvas.append(skaicius)
+print(masyvas)
+#pridedam dar 10  skaiciu
+
+#sukuriam du naujus masyvus
+
+
+poriniai = []
+neporiniai = []
+for i in range (40) :
+    if i % 2 == 0:
+        poriniai.append(masyvas[i])
+    else:
+        neporiniai.append(masyvas[i])
+print(poriniai, neporiniai)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
