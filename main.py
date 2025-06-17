@@ -191,6 +191,94 @@ for i in range (40) :
         neporiniai.append(masyvas[i])
 print(poriniai, neporiniai)
 
+for i in range(10):
+    masyvas.append(random.randint(5,25))
+print(masyvas)
+for i in range(0, 10,2):
+    if masyvas[i] > 15:
+        masyvas[i] = 0
+print(masyvas)
+
+#ieskom pirmo indekso,kur reiksme > 10
+for i in range(40) :
+    if masyvas[i] > 10:
+        print("pirmas indeksas,kur reiksme >10:", i)
+
+masyvas = []
+for i in range(200) :
+    raide = random.choice(['A', 'B', 'C','D'])
+    masyvas.append(raide)
+a_kiekis = 0
+b_kiekis = 0
+c_kiekis = 0
+d_kiekis = 0
+for raide in masyvas:
+    if raide == 'A':
+        a_kiekis += 1
+    elif raide == 'B':
+        b_kiekis += 1
+    elif raide == 'C':
+        c_kiekis += 1
+    elif raide == 'D':
+        d_kiekis += 1
+print(masyvas)
+print("A kiekis:", a_kiekis)
+print("B kiekis:", b_kiekis)
+print("C kiekis:", c_kiekis)
+print("D kiekis:", d_kiekis)
+
+#sugeneruojam masyva su 200 atsitiktiniu raidziu A,B,C,D
+masyvas = []
+for i in range(200) :
+    raide = random.choice(['A', 'B', 'C','D'])
+    masyvas.append(raide)
+#rikiavimas pagal abecele
+masyvas.sort()
+print("isrikiuotas masyvas:", masyvas)
+
+masyvas1 = [random.choice(['A', 'B', 'C','D']) for i in range(200)]
+masyvas2 = [random.choice(['A', 'B', 'C','D']) for i in range(200)]
+masyvas3 = [random.choice(['A', 'B', 'C','D']) for i in range(200)]
+sujungtas_masyvas = [masyvas1, masyvas2, masyvas3]
+for i in range(200):
+    kombinacija = masyvas[i] + masyvas2[i] + masyvas3[i]
+    sujungtas_masyvas.append('sujugtas')
+#skirtingos kombinacijos
+skirtingos = []
+for i in range(200):
+    if sujungtas_masyvas[i] not in skirtingos:
+        skirtingos.append(sujungtas_masyvas[i])
+print("skirtingu kombinaciju kiekis", len(skirtingos))
+print("kombinacijos:", skirtingos)
+
+masyvas1 = random.sample(range(100, 1000), 100)
+masyvas2 = random.sample(range(100, 1000), 100)
+print("masyvas1:", masyvas1)
+print("masyvas2:", masyvas2)
+
+tik_pirmame = []
+for skaicius in masyvas1:
+    if skaicius not in masyvas2:
+     tik_pirmame.append(skaicius)
+print(masyvas1)
+print(masyvas2)
+print(tik_pirmame)
+
+kartojasi = []
+for skaicius in masyvas1:
+    if skaicius in masyvas2:
+        kartojasi.append(skaicius)
+print(masyvas1)
+print(masyvas2)
+print(kartojasi)
+
+
+
+
+
+
+
+
 
 
 
