@@ -1,3 +1,4 @@
+from operator import length_hint
 from random import random
 
 print("loops and arrays")
@@ -305,6 +306,36 @@ def sugeneruoti_skaiciu (min_reiksme,max_reiksme):
     return random.randint(min_reiksme,max_reiksme)
 skaicius = sugeneruoti_skaiciu(20,30)
 print(skaicius)
+
+def generuoti_masyva (min_reiksme,max_reiksme,length):
+    masyvas = []
+    for i in range(length):
+        skaicius=random.randint(min_reiksme,max_reiksme)
+        masyvas.append(skaicius)
+        return masyvas
+rezultatas = generuoti_masyva(20,30,10)
+print(rezultatas)
+
+
+def susumuoti_masyva(masyvas) :
+    suma = sum(masyvas)
+    return suma
+skaiciai = [20,30,10]
+rezultatas = susumuoti_masyva(skaiciai)
+print("suma yra", rezultatas)
+
+#Sukurkite Funkciją kuri priimtų 6toje užduotyje sugeneruotą masyvą ir gražintų jos skaičių vidurkį.
+
+def skaiciuoti_vidurki(masyvas):
+    if len(masyvas) == 0:
+        return 0
+    vidurkis = sum(masyvas)/ len(masyvas)
+    return vidurkis
+skaiciuoti_vidurki(skaiciai)
+print("vidurkis yra", skaiciuoti_vidurki(skaiciai) )
+
+
+
 
 
 
