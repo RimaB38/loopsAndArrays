@@ -272,6 +272,43 @@ print(masyvas1)
 print(masyvas2)
 print(kartojasi)
 
+def susumuok(a,b) :
+    suma = a + b
+    print(suma)
+
+
+susumuok(2,5)
+
+
+reiksme = (9.8596)
+def pisq() :
+    return 9.8596
+print(reiksme)
+
+def sandauga(a,b):
+    return a * b
+rezultatas=sandauga(2,5)
+print("sandauga yra:",rezultatas)
+
+
+skaiciai = [2, 5, 3, 4, 5]
+
+
+def spausdinti_masyva(masyvas):
+    for skaicius in masyvas:
+        print(skaicius)
+
+spausdinti_masyva(skaiciai)
+
+import random
+def sugeneruoti_skaiciu (min_reiksme,max_reiksme):
+    return random.randint(min_reiksme,max_reiksme)
+skaicius = sugeneruoti_skaiciu(20,30)
+print(skaicius)
+
+
+
+
 
 
 
