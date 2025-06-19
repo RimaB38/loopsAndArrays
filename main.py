@@ -347,6 +347,60 @@ def spausdinti_staciakampi( eiluciu_skaicius, zvaigzduciu_skaicius):
 spausdinti_staciakampi(4,6)
 
 
+def nagrineti_sakini (sakinys):
+    simboliai = 0
+    tarpai = 0
+    for simbolis in sakinys:
+        if simbolis == " ":
+           tarpai += 1
+    else:
+        simboliai += 23
+    print("simboliu (be tarpu):", simboliai)
+    print ("tarpu:", tarpai)
+nagrineti_sakini("siandiena labai grazi diena")
+
+def kodavimas_sakinys(sakinys):
+    return sakinys[::-1]
+
+def kodavimas_sakinys_v2(sakinys):
+    kodavimas = ""
+    for letter in sakinys:
+        kodavimas = letter + kodavimas
+    return  kodavimas
+rezultatas = kodavimas_sakinys("Rima")
+print(rezultatas)
+print(kodavimas_sakinys_v2("Rima"))
+
+def apsukti_zodzius(sakinys):
+    zodziai = sakinys.split()
+    apsukti = []
+    for zodis in zodziai:
+        apsukti.append(zodis[::-1])
+    rezultatas = (apsukti)
+    print(rezultatas)
+apsukti_zodzius("Labas rytas")
+
+
+def spausdinti_skaicius(sarasas):
+    for skaicius in sarasas:
+        if type(skaicius) == int:
+            print(skaicius)
+duomenys = (2,10,15,6, "labas")
+spausdinti_skaicius(duomenys)
+
+def spausdinti_sveikus_skaicius(sarasas):
+    for zodis in sarasas:
+        if type(zodis) == int:
+            print(zodis)
+duomenys = (2,10,15,6,100, 8 )
+spausdinti_sveikus_skaicius(duomenys)
+
+
+
+
+
+
+
 
 
 
