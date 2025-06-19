@@ -272,6 +272,8 @@
 # print(masyvas1)
 # print(masyvas2)
 # print(kartojasi)
+from operator import truediv
+
 
 def susumuok(a,b) :
     suma = a + b
@@ -394,6 +396,47 @@ def spausdinti_sveikus_skaicius(sarasas):
             print(zodis)
 duomenys = (2,10,15,6,100, 8 )
 spausdinti_sveikus_skaicius(duomenys)
+
+
+def word_count(tekstas):
+    zodziai = tekstas.split()
+    return len(zodziai)
+
+sakinys = "siandien sekasi labai gerai"
+rezultatas = word_count(sakinys)
+print("zodziu skaicius:", rezultatas)
+
+
+def boolean_skaicius(masyvas,filtruoti_porinius):
+    rezultatas = []
+    for skaicius in masyvas:
+        if filtruoti_porinius == True and skaicius %2 ==0:
+            rezultatas.append(skaicius)
+        elif filtruoti_porinius == False and skaicius %2 !=0:
+            rezultatas.append(skaicius)
+    return rezultatas
+skaiciai = [2,5,4,6,8]
+print(boolean_skaicius(skaiciai,True))
+print(boolean_skaicius(skaiciai,False))
+
+
+def number_is_prime(skaicius):
+    if skaicius <2:
+        return False
+    for k  in range(2,skaicius):
+        if skaicius % k == 0:
+          return False
+    return True
+skaiciai = [2,3,5,7,11,12]
+for skaicius in skaiciai:
+    if number_is_prime(skaicius):
+        print(skaicius)
+
+
+
+
+
+
 
 
 
