@@ -432,6 +432,46 @@ for skaicius in skaiciai:
     if number_is_prime(skaicius):
         print(skaicius)
 
+def pakelti_laipsniu(skaicius,laipsnis):
+    return skaicius ** laipsnis
+
+rezultatas = pakelti_laipsniu(2,4)
+print(rezultatas)
+
+def nepasikartojantys_skaiciai(masyvas):
+    return[skaicius for skaicius in masyvas if masyvas.count(skaicius) == 1]
+skaiciai = [1,2,2,3,4,4,5,6,6,7,8]
+rezultatas = nepasikartojantys_skaiciai(skaiciai)
+print(rezultatas)
+
+
+def daugiausia_simboliu(tekstas) :
+    daznis ={}
+    print(tekstas)
+    for simbolis in tekstas:
+        if simbolis in daznis:
+            daznis[simbolis] += 1
+        else:
+            daznis[simbolis] = 1
+    daugiausia = 0
+    symb = ""
+    for simbolis in daznis:
+         if daznis[simbolis] > daugiausia:
+            daugiausia = daznis[simbolis]
+            symb = simbolis
+    print(daznis)
+    print(daugiausia, symb)
+print("simbolis, kuris pasikartoja daugiausia:")
+daugiausia_simboliu("as mokausi phyton programavimo")
+
+def spausdink_ilgiausia_zodi(tekstas):
+        zodziai = tekstas.replace(", ", "").split()
+        ilgiausias = ""
+        for zodis in zodziai:
+            if len(zodis) > len(ilgiausias):
+                ilgiausias = zodis
+        print("ilgiausias zodis:",ilgiausias)
+spausdink_ilgiausia_zodi("Labas siandien produktyvi diena")
 
 
 
@@ -449,10 +489,12 @@ for skaicius in skaiciai:
 
 
 
-
-
-
-
+# Dictionary = {"Forename":"Paul", "Surname":"Dinh"}
+# KeyList = ["Forename", "Surname"]
+# for Key in KeyList:
+#     print(Key, "=", Dictionary[Key])
+#
+# print(Dictionary['Forename'])
 
 
 
