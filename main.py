@@ -473,6 +473,59 @@ def spausdink_ilgiausia_zodi(tekstas):
         print("ilgiausias zodis:",ilgiausias)
 spausdink_ilgiausia_zodi("Labas siandien produktyvi diena")
 
+def spausdinti_su_bruksniais(tekstas):
+    print (f"---{tekstas}---")
+    print(rezultatas)
+spausdinti_su_bruksniais("labas")
+
+def dalijasi_be_liekanos(skaicius):
+    kiekis=0
+    for i in range(2,skaicius):
+        if skaicius % i == 0:
+            kiekis += 1
+    return kiekis
+print(dalijasi_be_liekanos(10))
+print(dalijasi_be_liekanos(20))
+
+import random
+def dalikliai_be_liekanos(skaicius):
+    kiekis=0
+    for i in range(2,skaicius):
+        if skaicius % i == 0:
+            kiekis += 1
+    return kiekis
+masyvas = [random.randint(33,77) for i in range(100)]
+rusiuotas = sorted(masyvas, key=dalikliai_be_liekanos, reverse=True)
+print("pradinis masyvas:", masyvas)
+print(masyvas)
+print(" isrikiuotas masyvas pagal dalikliu kieki(mazejancia tvarka):")
+print(rusiuotas)
+
+import random
+def dalikliai_be_liekanos(skaicius):
+    kiekis=0
+    for i in range(2,skaicius):
+        if skaicius % i == 0:
+            kiekis += 1
+    return kiekis
+
+masyvas = [random.randint(333,777) for i in range(100)]
+pirminiu_kiekis = 0
+for skaicius in masyvas:
+    if dalikliai_be_liekanos(skaicius) == 0:
+        pirminiu_kiekis += 1
+
+print("sugeneruotas masyvas:")
+print(masyvas)
+print("pirminiu skaiciu kiekis masyve:", pirminiu_kiekis)
+
+
+
+
+
+
+
+
 
 
 
